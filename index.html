@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Marcos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <header>
+        
+        <img id="site-logo" src="./assets/livro-com-lampada-icon.png" >
+        
+        <div>
+            <button>Homeworks</button>
+            <button>Aulas Particulares</button>
+            <button>Sobre mim</button>
+        </div>
+    </header>
+
+    <section id="greeting">
+
+        <div style="align-items: center; ">
+            <h1 style="letter-spacing: 20px;" >Teacher Marcos</h1>
+        </div>
+        
+        <div style="flex-direction: column;">
+            <h2>Aqui você encontra Homeworks e outras atividades</h2>
+            <h2>para praticar o inglês quando tiver um tempinho, ou se quiser pegar correção</h2>
+        </div>
+        
+        <div style="flex-direction: column;">
+            <div>
+                <a
+                target="_blank"
+                href="https://wa.me/+5511999917044"
+                >Quer ter aula comigo? Me manda uma mensagem no whatsapp -></a>
+            </div>
+            
+            <div>
+                <a
+                href="#footer"
+                style="
+                margin: 0px;
+                color: lemonchiffon;
+                text-decoration: none;">v Tire suas dúvidas no f.a.q v</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="homeworks" >
+        
+        
+            
+            <h1 style="width: 70%; ">Homeworks</h1>
+            
+            <div id="homeworks-wrapper">
+                <button style="background-image: url(assets/piramidesMenor.png);">Iniciante</button>
+                <button style="background-image: url(assets/coliseuMenor.png);">Intermediário</button>
+                <button style="background-image: url(assets/tajMahalMenor.png);">Intermediário II</button>
+                <button style="background-image: url(assets/cristoRedentorMenor.png);">Avançado</button>
+                <button style="background-image: url(assets/Machu_Picchu\,_Peru.jpg);">Avançado II</button>
+                <button style="background-image: url(assets/petraElKhasnehMenor.png);">Enterprise</button>
+            </div>
+        
+
+    </section>
+
+    <footer id="footer">
+        
+        <div style="flex-direction: column;
+            height: 150px; width: 20%;">
+            
+            <h1 
+                style="width: 100%;
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: 900;">
+                Me siga!</h1>
+                
+            <div style="justify-content: center;">
+                <a>Instagram</a>
+                <a>Whatsapp</a>
+                <a>LinkedIn</a>
+            </div>
+
+        </div>
+
+        <div id="faq-wrapper" >
+            <h1>
+                <span
+                style="display: inline;
+                background-color: aliceblue;
+                padding: 10px;
+                border-radius: 10x;">
+                Frequently Asked Questions</span>
+            </h1>
+            <div id="acordion-wrapper">
+                <button
+                    class="accordion"
+                    onclick="toggleAccordion(this)">
+                    Quanto tempo demora pra ficar fluente?</button>
+                <div class="panel">
+                  <p>Conseguimos  alcançar a fluência em até 2 anos, mas tudo depende do 
+                  empenho do aluno, fatores como frequência e entrega 
+                  de lição de casa têm grande impacto</p>
+                </div>
+
+                <button
+                    class="accordion"
+                    onclick="toggleAccordion(this)">
+                    São quantas aulas por mês?</button>
+                <div class="panel">
+                  <p>Fazemos duas aulas por semana, de uma hora cada uma, totalizando 
+                  oito aulas por mês. </p>
+                </div>
+
+                <button
+                    class="accordion"
+                    onclick="toggleAccordion(this)">
+                    Qual é o nível de fluência alcançado?</button>
+                <div class="panel">
+                  <p>Vamos alcançar o nível C1, que corresponde ao inglês avançado.
+                   É um grau antes da proficiência</p>
+                </div>
+
+                <button
+                    class="accordion"
+                    onclick="toggleAccordion(this)">
+                    Como funcionam as aulas?</button>
+                <div class="panel">
+                  <p>Cada aula tem uma hora de duração, devendo ser realizada pelo
+                   Google Meet no horário combinado. </p>
+                </div>
+
+                <button
+                    class="accordion"
+                    onclick="toggleAccordion(this)">
+                    Vou ter um certificado?</button>
+                <div class="panel">
+                  <p>Infelizmente não, não emito certificações de nível.</p>
+                </div>
+
+                <button
+                    class="accordion"
+                    onclick="toggleAccordion(this)">
+                    Qual é o valor da mensalidade? Tem desconto?</button>
+                <div class="panel">
+                  <p>O valor da mensalidade é de 350,00 reais. Você pode indicar
+                   mais uma pessoa para fazer as aulas em dupla, reduzindo o valor
+                    para 300,00 reais para cada um</p>
+                </div>
+
+                <button
+                    class="accordion"
+                    onclick="toggleAccordion(this)">
+                    Qual é a forma de pagamento?</button>
+                <div class="panel">
+                  <p>O pagamento deve ser feito na data estipulada via pix.</p>
+                </div>
+
+                <button
+                    class="accordion"
+                    onclick="toggleAccordion(this)">
+                    Como entro em contato?</button>
+                <div class="panel">
+                  <p>Manda uma mensagem no Whatsapp (+55 11 99991-7044) 
+                  ou no Instagram (_marcosviniciusrosa_)</p>
+                </div>
+
+                <button
+                    class="accordion"
+                    onclick="toggleAccordion(this)">
+                    O que acontece se eu perder uma aula?</button>
+                <div class="panel">
+                  <p>Se houver um aviso prévio de no mínimo 1 dia de antecedência
+                   e o aluno tiver mais de 80% de presença a aula fica como 
+                   crédito para o próximo mês, caso contrário a aula é perdida. </p>
+                </div>
+                
+            </div>
+        </div>
+
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+header{
+    display: flex; 
+    flex-direction: row;
+    padding: 30px;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    border-bottom: 2px solid cornsilk;
+}
+
+#site-logo{
+    height:auto;
+    width: 55px;
+}
+
+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 100%;
+    gap: 20px;
+}
+
+button{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: larger;
+    color: rgb(30, 30, 30);
+    border: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+button:hover{
+    background-color: cornsilk;
+}
+
+section{
+    border-bottom: 2px solid cornsilk;
+}
+
+#greeting{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 800px;
+    max-width:1900px;
+    width: 100%;
+    background-image: url(assets/lousa.png);
+    background-size: cover;
+    font-family: 'Caveat', serif;
+    font-size: 2vw;
+    color: aliceblue;
+}
+
+#greeting > div{
+    justify-content: center;
+    align-items: center;
+    
+}
+#greeting > div > h2{
+    
+    font-size: 2.5vw;
+    margin: 0px;
+}
+a{
+    width: 100%;
+    text-align: center;
+}
+a:link {
+  color: aliceblue;
+}
+
+/* visited link */
+a:visited {
+  color: antiquewhite;
+}
+
+/* mouse over link */
+a:hover {
+  color: cornsilk;
+}
+
+/* selected link */
+a:active {
+  color: aliceblue;
+}
+
+#homeworks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    max-width:1900px;
+    width: 100%;
+    background-image: url(assets/fundo-livros-dark.png);
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2vw;
+    color: aliceblue;
+}
+
+#homeworks-wrapper{
+    height: 100%;
+    width: 70%;;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 50px;  
+}
+
+#homeworks-wrapper > button{
+    height: 200px;
+    width: 325px;
+    border-radius: 10px;
+    text-align: start;
+    display: flex;
+    font-size: 1.8vw;
+    background-size: cover;
+    cursor: pointer;
+    border: 2px solid cornsilk;
+    color: cornsilk;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color: cornsilk;
+    background-attachment: fixed;
+    padding-bottom: 40px;
+    height: fit-content;
+}
+
+#faq-wrapper{
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(assets/question\ marks.png);
+    width: 60%;
+    gap: 0px;
+}
+
+#faq-wrapper > h1{
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    color: rgb(30, 30, 30);
+    
+    
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+#acordion-wrapper{
+    flex-direction: column;
+    justify-content: start;
+    gap: 0px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: white;
+  color: rgb(30, 30, 30);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: justify;
+  border: 2px solid #d9d9d9;
+  border-radius: 5px;
+  transition: 0.4s;
+  margin-top: 10px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: cornsilk;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: larger;
+    color: rgb(30, 30, 30);
+  text-align: justify;
+  background-color: white;
+  display: none;
+  justify-content: start;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: 1s ease-out;
+}
+
+p{
+ padding-inline: 20px;
+}
