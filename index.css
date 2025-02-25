@@ -1,3 +1,4 @@
+/* --------------------------começo do header------------------------- */
 header{
     display: flex; 
     flex-direction: row;
@@ -9,7 +10,6 @@ header{
 }
 
 #site-logo{
-    height:auto;
     width: 55px;
 }
 
@@ -34,6 +34,23 @@ button:hover{
     background-color: cornsilk;
 }
 
+/* media query header celular */
+@media only screen and (max-width: 600px) {
+  button{
+    font-size: 1em;
+  }
+  #site-logo{
+    width: 30px;
+    height: 30px;
+  }
+  div{
+    gap: 0px;
+  }
+}
+
+
+/* --------------------------fim do header------------------------- */
+
 section{
     border-bottom: 2px solid cornsilk;
 }
@@ -42,14 +59,18 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 800px;
+    height: max-content;
+    min-height: 800px;
     max-width:1900px;
     width: 100%;
     background-image: url(assets/lousa.png);
     background-size: cover;
     font-family: 'Caveat', serif;
-    font-size: 2vw;
     color: aliceblue;
+}
+
+#teacher{
+    font-size: 4em;
 }
 
 #greeting > div{
@@ -59,12 +80,13 @@ section{
 }
 #greeting > div > h2{
     
-    font-size: 2.5vw;
+    font-size: 3em;
     margin: 0px;
 }
 a{
     width: 100%;
     text-align: center;
+    font-size: 3em;
 }
 a:link {
   color: aliceblue;
@@ -85,18 +107,51 @@ a:active {
   color: aliceblue;
 }
 
+/* media query homework celular */
+@media only screen and (max-width: 600px) {
+    #greeting{
+        justify-content: center;
+        gap: 15px;
+        min-height: 600px;
+    }
+    #teacher{
+        font-size: 2em;
+        text-align: center;
+    }
+    #greeting > div > h2{
+        font-size: 2em;
+        text-align: center;
+    }
+    a{
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+    }
+
+}
+
+
+/* --------------------------fim do greeting------------------------- */
+
 #homeworks{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 800px;
+    min-height: 800px;
     max-width:1900px;
     width: 100%;
     background-image: url(assets/fundo-livros-dark.png);
     background-size: cover;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2vw;
+    font-size: 2em;
     color: aliceblue;
+    gap: 0px;
+}
+
+#hwTitle{
+    width: 70%;
+    text-align: center;
+    text-shadow: -5px 5px black;
 }
 
 #homeworks-wrapper{
@@ -118,16 +173,102 @@ a:active {
     cursor: pointer;
     border: 2px solid cornsilk;
     color: cornsilk;
+    text-shadow: -2px 2px black;
 }
+@media only screen and (max-width: 600px) {
+    #homeworks{
+        padding-bottom: 30px;
+    }
+
+    #hwTitle{
+        font-size: 1em;
+    }
+
+    #homeworks-wrapper{
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+
+    #homeworks-wrapper > button{
+        height: 150px;
+        width: 90%;
+        font-size: 1em;
+    
+    }
+}
+
+
+/* --------------------------fim do homeworks------------------------- */
 
 footer{
     display: flex;
     flex-direction: row;
     background-color: cornsilk;
-    background-attachment: fixed;
     padding-bottom: 40px;
     height: fit-content;
 }
+
+#socialsdiv{
+    flex-direction: column;
+    height: 150px; width: 20%; margin-top: 50px;
+    
+}
+#socialsdiv > div{
+    justify-content: center;
+}
+
+.socials{
+    font-size: 2em;
+    width: fit-content;
+    cursor: pointer;
+}
+
+
+.bi-whatsapp{
+    color: #25D366;
+}
+.bi-whatsapp:hover{
+    color: black;
+}
+
+.bi-linkedin{
+    color: #0077B5;
+}
+.bi-linkedin:hover{
+    color: black;
+}
+
+
+.bi-instagram{
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-image: linear-gradient(#6228d7, #ee2a7b,#f9ce34);
+    border-radius: 5px;
+    color: white;
+}
+.bi-instagram:hover{
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    footer{
+        flex-direction: column;
+    }
+    
+    #socialsdiv{
+        width: 100%;
+    }
+
+    #socialsdiv > div{
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}
+
+/* --------------------------fim do socials------------------------- */
 
 #faq-wrapper{
     flex-direction: column;
@@ -135,6 +276,8 @@ footer{
     background-image: url(assets/question\ marks.png);
     width: 60%;
     gap: 0px;
+    margin-top: 50px;
+    border-radius: 15px;
 }
 
 #faq-wrapper > h1{
@@ -160,6 +303,8 @@ footer{
 .accordion {
   background-color: white;
   color: rgb(30, 30, 30);
+  font-weight: bolder;
+  font-size: larger;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -193,3 +338,10 @@ footer{
 p{
  padding-inline: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    #faq-wrapper{
+        width: 100%;
+    }
+}
+/* --------------------------fim do footer------------------------- */

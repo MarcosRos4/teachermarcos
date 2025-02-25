@@ -25,3 +25,9 @@ function toggleAccordion(button) {
         content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 }
+
+function scrollToElementId(id) {
+    document.getElementById(id).scrollIntoView({behavior:"smooth", block: 'center'})
+}
+
+
