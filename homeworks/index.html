@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" type="image/x-icon" href="../../../assets/favicon.ico">
-    <link rel="stylesheet" href="hm1.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
@@ -23,16 +23,28 @@
 
     <div id="container">
         <h1>Homework Survival 1 e 2</h1>
+        <div class="pagination">
+            <a href="#" onclick="loadSentences('hm1.txt')">&laquo;</a>
+            <a href="#" onclick="loadSentences('hm1.txt')">1</a>
+            <a href="#" onclick="loadSentences('hm2.txt')">2</a>
+            <a href="#" onclick="loadSentences('hm3.txt')">3</a>
+            <a href="#" onclick="loadSentences('hm4.txt')">4</a>
+            <a href="#" onclick="loadSentences('hm5.txt')">5</a>
+            <a href="#" onclick="loadSentences('hm6.txt')">6</a>
+            <a href="#" onclick="loadSentences('hm6.txt')">&raquo;</a>
+        </div>
         <div id="sentences-container"></div>
     </div>
 
     <script>
-        async function loadSentences() {
-            const response = await fetch('frases.txt');
+        async function loadSentences(fileName) {
+            const response = await fetch(fileName);
             const text = await response.text();
             const sentences = text.split('\n').map(line => line.split('->').map(part => part.trim()));
 
             const container = document.getElementById('sentences-container');
+            container.innerHTML = ''; // Limpa o conteúdo anterior
+
             sentences.forEach(([english, portuguese]) => {
                 const sentenceDiv = document.createElement('div');
                 sentenceDiv.classList.add('sentence');
@@ -49,7 +61,8 @@
             });
         }
 
-        loadSentences();
+        // Carrega a primeira página por padrão
+        loadSentences('hm1.txt');
     </script>
 </body>
 </html>
