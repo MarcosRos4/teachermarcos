@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Marcos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/x-icon" href="../../../assets/favicon.ico">
+    <link rel="stylesheet" href="hm1.css">
+</head>
+<body>
+    <header>
+        <img id="site-logo" src="../../../assets/livro-com-lampada-icon.png" style="cursor: pointer;" onclick="scrollToElementId('greeting')">
+        <div>
+            <button onclick="scrollToElementId('homeworks')">Homeworks</button>
+            <button onclick="scrollToElementId('footer')">Aulas Particulares</button>
+            <button>Sobre mim</button>
+        </div>
+    </header>
+
+    <div id="container">
+        <h1>Homework Survival 1 e 2</h1>
+        <div id="sentences-container"></div>
+    </div>
+
+    <script>
+        async function loadSentences() {
+            const response = await fetch('frases.txt');
+            const text = await response.text();
+            const sentences = text.split('\n').map(line => line.split('->').map(part => part.trim()));
+
+            const container = document.getElementById('sentences-container');
+            sentences.forEach(([english, portuguese]) => {
+                const sentenceDiv = document.createElement('div');
+                sentenceDiv.classList.add('sentence');
+
+                const englishH1 = document.createElement('h1');
+                englishH1.textContent = english;
+                sentenceDiv.appendChild(englishH1);
+
+                const portugueseH1 = document.createElement('h1');
+                portugueseH1.textContent = portuguese;
+                sentenceDiv.appendChild(portugueseH1);
+
+                container.appendChild(sentenceDiv);
+            });
+        }
+
+        loadSentences();
+    </script>
+</body>
+</html>
