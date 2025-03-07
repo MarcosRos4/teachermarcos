@@ -22,47 +22,14 @@
     </header>
 
     <div id="container">
-        <h1>Homework Survival 1 e 2</h1>
-        <div class="pagination">
-            <a href="#" onclick="loadSentences('hm1.txt')">&laquo;</a>
-            <a href="#" onclick="loadSentences('hm1.txt')">1</a>
-            <a href="#" onclick="loadSentences('hm2.txt')">2</a>
-            <a href="#" onclick="loadSentences('hm3.txt')">3</a>
-            <a href="#" onclick="loadSentences('hm4.txt')">4</a>
-            <a href="#" onclick="loadSentences('hm5.txt')">5</a>
-            <a href="#" onclick="loadSentences('hm6.txt')">6</a>
-            <a href="#" onclick="loadSentences('hm6.txt')">&raquo;</a>
+        <div id="title-container">
+            <h1 id="title" >Homework Survival 1 e 2  |  EZ MODE</h1>
+            <input type="checkbox" id="toggleAnswers">
         </div>
+        <div class="pagination" id="pagination"></div>
         <div id="sentences-container"></div>
     </div>
 
-    <script>
-        async function loadSentences(fileName) {
-            const response = await fetch(fileName);
-            const text = await response.text();
-            const sentences = text.split('\n').map(line => line.split('->').map(part => part.trim()));
-
-            const container = document.getElementById('sentences-container');
-            container.innerHTML = ''; // Limpa o conteúdo anterior
-
-            sentences.forEach(([english, portuguese]) => {
-                const sentenceDiv = document.createElement('div');
-                sentenceDiv.classList.add('sentence');
-
-                const englishH1 = document.createElement('h1');
-                englishH1.textContent = english;
-                sentenceDiv.appendChild(englishH1);
-
-                const portugueseH1 = document.createElement('h1');
-                portugueseH1.textContent = portuguese;
-                sentenceDiv.appendChild(portugueseH1);
-
-                container.appendChild(sentenceDiv);
-            });
-        }
-
-        // Carrega a primeira página por padrão
-        loadSentences('hm1.txt');
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>

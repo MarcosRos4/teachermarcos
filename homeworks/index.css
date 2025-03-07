@@ -51,7 +51,7 @@ button:hover{
     gap: 0px;
   }
 }
-
+/* container da pagina */
 #container{
   display: flex;
   flex-direction: column;
@@ -59,7 +59,27 @@ button:hover{
   gap: 10px;
   width: 100%;  
 }
+/* container do titulo */
+#title-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
 
+/* botão de mostrar resposta */
+#toggleAnswers {
+  width: 60px;
+  height: 34px;
+}
+
+#toggleAnswers:checked {
+  background-color: dodgerblue;
+}
+
+/* container das frases */
 #sentences-container{
   width: 100%;
   display: flex;
@@ -74,8 +94,11 @@ button:hover{
   align-items: center;
   gap: 30px;
   width: 70%;
-
 }
+
+/* .sentence > h1{
+  color: royalblue;
+} */
 
 /* Pagination links */
 .pagination a {
